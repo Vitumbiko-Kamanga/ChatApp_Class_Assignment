@@ -47,7 +47,7 @@ public class ChatAppController {
         while((line = reader.readLine()) != null){
             if (line.equals("_END_")) break;
 
-            String[] res = line.split("/");
+            String[] res = line.split("/",2);
             lastMessageTime = res[0];
 
             Label label1 = new Label(res[1]);
@@ -81,7 +81,7 @@ public class ChatAppController {
             while ((line = reader.readLine()) != null){
                 if (line.equals("_END_")) break;
 
-                String[] res = line.split("/");
+                String[] res = line.split("/",2);
                 lastMessageTime = res[0];
 
                 Label label1 = new Label(res[1]);

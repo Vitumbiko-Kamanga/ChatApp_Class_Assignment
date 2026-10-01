@@ -27,12 +27,10 @@ public class MessageServer {
             Socket socket = serverSocket.accept();
             System.out.println("Connection received ...");
 
-            // reading the content sent from the client
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String command  = reader.readLine();
             String[] commands = command.split("/");
 
-            // writing to the client
             PrintWriter writer = new PrintWriter(socket.getOutputStream(),true);
             switch (commands[0]){
                 case "GET":

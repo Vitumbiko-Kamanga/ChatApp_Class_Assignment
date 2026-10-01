@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("chat.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
-        stage.setTitle("Chat App");
+        stage.setTitle("Chat Site");
         stage.setScene(scene);
         stage.show();
     }
